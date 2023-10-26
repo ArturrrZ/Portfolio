@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Don't</title>
+  <style>
+    #angry{font-size: 20px}
+    body {
+  background-color: linen;
+}
+    .text {
+        font-size: 60px;
+    }
+    h3 {color:red;}
+  </style>
+</head>
+<body>
+<div class="abc" style="width: 500px; margin:auto">
+  {%if patrick==True%}You are sweetie!!!:*
+  <img src="https://media.giphy.com/media/UVk5yzljef0kGiayL1/giphy.gif" />
+  <p class='text'>I love you! ❤️</p>
+  {%else %}
+  <h1 style="font-size: 66px">I TOLD YOU. </h1>
+  <h3 class='text' id="angry">Do not tap on this buttoon 🤬<br/>Anyways, you are here. </h3>
+  <form method="POST" action="{{url_for('dont')}}">
+    <button type="submit" style="height: 400px; width: 400px">TAP TO APOLOGIZE</button>
+</form>
+  {%endif%}
+
+</div>
+</body>
+</html>
