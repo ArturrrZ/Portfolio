@@ -1,9 +1,12 @@
 from flask import Flask, render_template, url_for, request
-app=Flask(__name__)
+from flask_bootstrap import Bootstrap5
 
+
+app=Flask(__name__)
+Bootstrap5(app)
 @app.route("/")
 def home():
-    return render_template('test.html')
+    return render_template('index.html')
 @app.route("/dont",methods=['GET','POST'])
 def dont():
     patrick=False
