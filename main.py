@@ -22,12 +22,12 @@ class Projects(db.Model):
 
 def add_project():
     new_project=Projects(
-        title="Atari Breakout",
-        subtitle="Breakout is an arcade video game developed and published by Atari, Inc. and released on May 13, 1976.",
-        check_url="https://replit.com/@ArturZiianbaev1/6BreakoutGame?v=1",
-        github_url="https://github.com/ArturrrZ/Project_6_AtariBreakout_Game",
-        category="arcade",
-        picture="./static/assets/img/atari.jpg",
+        title="Cookies Clicker Bot",
+        subtitle="Start this bot and forget about clicking! And you can easily beat your friends.",
+        check_url="https://github.com/ArturrrZ/Cookie_Clicker_Bot",
+        github_url="https://github.com/ArturrrZ/Cookie_Clicker_Bot",
+        category="web",
+        picture="./static/assets/img/cookies_clicker.jpg",
     )
     db.session.add(new_project)
     db.session.commit()
@@ -35,7 +35,7 @@ def add_project():
 
 with app.app_context():
     db.create_all()
-    # add_project()
+    add_project()
 
 
 @app.route("/")

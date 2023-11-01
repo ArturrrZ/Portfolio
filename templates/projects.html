@@ -43,6 +43,12 @@
                     <span class="badge text-bg-primary rounded-pill">Web</span>
                     {%elif project.category== 'arcade' %}
                     <span class="badge text-bg-danger rounded-pill">Arcade</span>
+                    {%elif project.category == 'gui'%}
+                    <span class="badge text-bg-warning rounded-pill">GUI</span>
+                    {%elif project.category == 'datascience'%}
+                    <span class="badge text-bg-success rounded-pill">Data Science</span>
+                    {%elif project.category == 'other'%}
+                    <span class="badge text-bg-secondary rounded-pill">Other</span>
 
 
                     {%endif%}
