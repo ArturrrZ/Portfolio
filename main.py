@@ -35,6 +35,7 @@ def add_project():
 
 with app.app_context():
     db.create_all()
+    #undo to add a new project to db
     # add_project()
 
 
@@ -56,6 +57,10 @@ def projects():
     # for _ in range(20):
     #     list.append(_)
     return render_template('projects.html',projects=projects)
+
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
