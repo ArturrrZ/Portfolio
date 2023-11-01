@@ -17,7 +17,10 @@ def dont():
 
 @app.route("/projects")
 def projects():
-    return "asd"
+    list=[]
+    for _ in range(3):
+        list.append(_)
+    return render_template('projects.html',projects=list)
 
 if __name__ == "__main__":
     app.run(debug=True)
