@@ -22,12 +22,12 @@ class Projects(db.Model):
 
 def add_project():
     new_project=Projects(
-        title="Cookies Clicker Bot",
-        subtitle="Start this bot and forget about clicking! And you can easily beat your friends.",
-        check_url="https://github.com/ArturrrZ/Cookie_Clicker_Bot",
-        github_url="https://github.com/ArturrrZ/Cookie_Clicker_Bot",
-        category="web",
-        picture="./static/assets/img/cookies_clicker.jpg",
+        title="My knowledge in DS",
+        subtitle="In the link below you can check some projects according to Data Science. I did them using Google Colab",
+        check_url="https://github.com/ArturrrZ/DataScience",
+        github_url="https://github.com/ArturrrZ/DataScience",
+        category="datascience",
+        picture="./static/assets/img/data_science.jpg",
     )
     db.session.add(new_project)
     db.session.commit()
@@ -35,7 +35,7 @@ def add_project():
 
 with app.app_context():
     db.create_all()
-    add_project()
+    # add_project()
 
 
 @app.route("/")
