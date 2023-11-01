@@ -18,7 +18,7 @@ def dont():
 @app.route("/projects")
 def projects():
     list=[]
-    for _ in range(3):
+    for _ in range(20):
         list.append(_)
     return render_template('projects.html',projects=list)
 
