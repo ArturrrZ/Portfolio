@@ -9,31 +9,27 @@
     {%endblock%}
 </head>
 {%block header%}
-<header class="p-3 text-bg-light">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <span class="fs-2 ">
-          <svg xmlns="http://www.w3.org/2000/svg"  height="24" fill="black" class="bi bi-box-seam " viewBox="0 0 16 16">
-            <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
-          </svg>
-        </span>
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2  justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-4  text-black">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-black">My projects</a></li>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3  border-bottom">
+
+     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2  justify-content-start mb-md-0">
+         <li>
+             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"/>
+            </svg>
+         </li>
+          <li><a href="{{url_for('home')}}" class="nav-link px-4  text-black">Home</a></li>
+          <li><a href="{{url_for('projects')}}" class="nav-link px-2 text-black">My projects</a></li>
         </ul>
 
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{{url_for('dont')}}"><button type="button" class="btn btn-outline-light me-2">don't use</button></a></li>
+        <li class="nav-item"><a href="#"><button type="button" class="btn btn-warning">Contact me</button></a></li>
+      </ul>
+    </header>
+  </div>
 
-        <div class="text-end">
-<!--            <a class="btn btn-warning" href="#" role="button">CONTACT ME</a>-->
-          <a href="{{url_for('dont')}}"><button type="button" class="btn btn-outline-light me-2">don't use</button></a>
-          <button type="button" class="btn btn-warning">Contact me</button>
-        </div>
-      </div>
-    </div>
-  </header>
+
 <body class="bg-light">
 {%endblock%}
 {%block main%}

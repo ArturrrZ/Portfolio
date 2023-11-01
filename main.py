@@ -15,5 +15,9 @@ def dont():
         return render_template('dont.html',patrick=patrick)
     return render_template('dont.html')
 
+@app.route("/projects")
+def projects():
+    return "asd"
+
 if __name__ == "__main__":
     app.run(debug=True)
