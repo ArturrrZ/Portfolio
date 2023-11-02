@@ -83,17 +83,18 @@ def contact():
         email=form.email.data
         name=form.name.data
         message=form.message.data
-        with smtplib.SMTP('smtp.gmail.com') as connection:
 
-            connection.starttls()
-            connection.login(user=SENDER,
-                             password=PASSWORD)
-            connection.sendmail(
-                from_addr=SENDER,
-                to_addrs=RECEIVER,
-                msg=f"Subject:Portfolio\n\nHere is the message from {name} his/her email: {email}.\nMessage: {message}"
-            )
-        return redirect(url_for('home'))
+        # with smtplib.SMTP('smtp.gmail.com') as connection:
+        #
+        #     connection.starttls()
+        #     connection.login(user=SENDER,
+        #                      password=PASSWORD)
+        #     connection.sendmail(
+        #         from_addr=SENDER,
+        #         to_addrs=RECEIVER,
+        #         msg=f"Subject:Portfolio\n\nHere is the message from {name} his/her email: {email}.\nMessage: {message}"
+        #     )
+        return render_template('contact.html')
 
 
     return render_template('contact.html',form=form)
