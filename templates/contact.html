@@ -1,9 +1,37 @@
 {%extends 'father_template.html'%}
+{% from "bootstrap5/form.html" import render_form %}
 {%block title%}Contact Page{%endblock%}
 
 {%block main%}
+<div class="px-4 py-5 my-5 text-center">
 
-<h2>Form to contact me</h2>
+    <h1 class="display-5 fw-bold text-body-emphasis my-4">Contact me</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">My email: arturziianbaev@gmail.com
+          <br>Or you can fill out the form below.
+          <br>I will get back to you as soon as possible!
+          <br>Thank you!
+      </p>
+
+    </div>
+  </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-3">
+            {%if form%}
+                {{ render_form(form, novalidate=True) }}
+            {%else%}
+            <div class="text-center">
+            <h3>You successfully sent a message to Artur.</h3>
+            <h1>Thank you!</h1>
+            </div>
+            {%endif%}
+        </div>
+
+    </div>
+</div>
+
 
 {%endblock%}
 
