@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, redirect
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -93,7 +93,7 @@ def contact():
                 to_addrs=RECEIVER,
                 msg=f"Subject:Portfolio\n\nHere is the message from {name} his/her email: {email}.\nMessage: {message}"
             )
-        return render_template('contact.html')
+        return redirect(url_for('home'))
 
 
     return render_template('contact.html',form=form)
