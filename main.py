@@ -9,7 +9,7 @@ import os
 
 SENDER = os.environ.get("SENDER")
 PASSWORD=os.environ.get("PASSWORD")
-#email address where you want to get notification ⬇️
+#email address where you want to get notification ⬇
 RECEIVER = "arturziianbaev@gmail.com"
 
 class ContactForm(FlaskForm):
@@ -24,7 +24,7 @@ class ContactForm(FlaskForm):
 
 app=Flask(__name__)
 Bootstrap5(app)
-app.config['SECRET_KEY'] ="asd"
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 app.config['SQLALCHEMY_DATABASE_URI'] =('sqlite:///projects.db')
 db = SQLAlchemy()
 db.init_app(app)
