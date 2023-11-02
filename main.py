@@ -40,12 +40,12 @@ class Projects(db.Model):
 
 def add_project():
     new_project=Projects(
-        title="My knowledge in DS",
-        subtitle="In the link below you can check some projects according to Data Science. I did them using Google Colab",
-        check_url="https://github.com/ArturrrZ/DataScience",
-        github_url="https://github.com/ArturrrZ/DataScience",
-        category="datascience",
-        picture="./static/assets/img/data_science.jpg",
+        title="Portfolio",
+        subtitle="Check my glorious portfolio with more than 20 projects based on Python. ",
+        check_url="#",
+        github_url="https://github.com/ArturrrZ/Portfolio",
+        category="web",
+        picture="./static/assets/img/portfolio.jpg",
     )
     db.session.add(new_project)
     db.session.commit()
